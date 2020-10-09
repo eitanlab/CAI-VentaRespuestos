@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 using VentaRepuestos.Entidades.Exceptions;
@@ -68,10 +69,16 @@ namespace VentaRepuestos.Entidades
                 }
             });
         }
-        // Falta implementar
-        //public List<Repuesto> TraerPorCategoria(int categoria)
-        //{
+        public List<Repuesto> TraerPorCategoria(int codigoCategoria)
+        {
 
-        //}
+            List<Repuesto> listaRepuestosPorCategoria = new List<Repuesto>(); 
+            _listaRepuestos.ForEach(repuestoItem =>
+            {
+                if(repuestoItem.CategoriaDeRepuesto.Codigo == codigoCategoria)  
+                    listaRepuestosPorCategoria.Add(repuestoItem);
+            });
+            return listaRepuestosPorCategoria;
+        }
     }
 }

@@ -10,5 +10,20 @@ namespace VentaRepuestos.Entidades
     {
         int _codigo;
         string _nombre;
+
+        public Categoria(int codigo, string nombre)
+        {
+            _codigo = codigo;
+            _nombre = nombre;
+        }
+
+        public int Codigo
+        {
+            get { return _codigo; }
+        }
+        public string Nombre
+        {
+            get { return _nombre; }
+        }
     }
 }
