@@ -46,11 +46,6 @@ namespace VentaRepuestos.Entidades
         {
             get { return _categoria; }
         }
-
-        //public void AsignarCategoria(Categoria categoria)
-        //{
-        //    if(categoria.Equals) { }
-        //}
         public override string ToString()
         {
             return "(" + _codigo + ") - " + _nombre + " $" + _precio ;

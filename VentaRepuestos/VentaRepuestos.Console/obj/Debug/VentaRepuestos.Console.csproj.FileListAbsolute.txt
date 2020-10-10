@@ -1,0 +1,7 @@
+C:\Users\eitan\Repositories\CAI\CAI-VentaRespuestos\VentaRepuestos\VentaRepuestos.Console\bin\Debug\VentaRepuestos.Console.exe.config
+C:\Users\eitan\Repositories\CAI\CAI-VentaRespuestos\VentaRepuestos\VentaRepuestos.Console\bin\Debug\VentaRepuestos.Console.exe
+C:\Users\eitan\Repositories\CAI\CAI-VentaRespuestos\VentaRepuestos\VentaRepuestos.Console\bin\Debug\VentaRepuestos.Console.pdb
+C:\Users\eitan\Repositories\CAI\CAI-VentaRespuestos\VentaRepuestos\VentaRepuestos.Console\obj\Debug\VentaRepuestos.Console.csprojAssemblyReference.cache
+C:\Users\eitan\Repositories\CAI\CAI-VentaRespuestos\VentaRepuestos\VentaRepuestos.Console\obj\Debug\VentaRepuestos.Console.csproj.CoreCompileInputs.cache
+C:\Users\eitan\Repositories\CAI\CAI-VentaRespuestos\VentaRepuestos\VentaRepuestos.Console\obj\Debug\VentaRepuestos.Console.exe
+C:\Users\eitan\Repositories\CAI\CAI-VentaRespuestos\VentaRepuestos\VentaRepuestos.Console\obj\Debug\VentaRepuestos.Console.pdb

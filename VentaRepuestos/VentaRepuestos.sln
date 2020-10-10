@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.30523.141
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VentaRepuestos.Console", "VentaRepuestos.Console\VentaRepuestos.Console.csproj", "{0C17F385-D451-44FE-A513-C5F2F1785235}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A4C13F38-38F8-44A7-92D9-CE104B0E28C6} = {A4C13F38-38F8-44A7-92D9-CE104B0E28C6}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VentaRepuestos.Entidades", "VentaRepuestos.Entidades\VentaRepuestos.Entidades.csproj", "{A4C13F38-38F8-44A7-92D9-CE104B0E28C6}"
 EndProject

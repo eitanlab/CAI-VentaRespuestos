@@ -1,0 +1,6 @@
+C:\Users\eitan\Repositories\CAI\CAI-VentaRespuestos\VentaRepuestos\VentaRepuestos.Entidades\bin\Debug\VentaRepuestos.Entidades.dll
+C:\Users\eitan\Repositories\CAI\CAI-VentaRespuestos\VentaRepuestos\VentaRepuestos.Entidades\bin\Debug\VentaRepuestos.Entidades.pdb
+C:\Users\eitan\Repositories\CAI\CAI-VentaRespuestos\VentaRepuestos\VentaRepuestos.Entidades\obj\Debug\VentaRepuestos.Entidades.csprojAssemblyReference.cache
+C:\Users\eitan\Repositories\CAI\CAI-VentaRespuestos\VentaRepuestos\VentaRepuestos.Entidades\obj\Debug\VentaRepuestos.Entidades.csproj.CoreCompileInputs.cache
+C:\Users\eitan\Repositories\CAI\CAI-VentaRespuestos\VentaRepuestos\VentaRepuestos.Entidades\obj\Debug\VentaRepuestos.Entidades.dll
+C:\Users\eitan\Repositories\CAI\CAI-VentaRespuestos\VentaRepuestos\VentaRepuestos.Entidades\obj\Debug\VentaRepuestos.Entidades.pdb

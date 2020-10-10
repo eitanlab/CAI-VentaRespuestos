@@ -13,13 +13,28 @@ namespace VentaRepuestos.Entidades
         List<Repuesto> _listaRepuestos;
         string _nombreComercio;
         string _direccion;
+        public VentaRepuestos(string nombre, string direccion)
+        {
+            _nombreComercio = nombre;
+            _direccion = direccion;
+            _listaRepuestos = new List<Repuesto>();
+        }
         public string NombreComercio
         {
             get { return _nombreComercio; }
+            set { _nombreComercio = value; }
         }
         public string Direccion
         {
             get { return _direccion; }
+            set { _direccion = value; }
+        }
+        public Repuesto BuscarRepuesto(int codigo)
+        {
+            Repuesto rep = _listaRepuestos.Find(item => item.Codigo == codigo);
+            if (rep == null)
+                throw new RepuestoNoEncontradoException();
+            return rep;
         }
         public void AgregarRepuesto(Repuesto repuesto)
         {
@@ -27,56 +42,35 @@ namespace VentaRepuestos.Entidades
         }
         public void QuitarRepuesto(int codigo)
         {
-            _listaRepuestos.ForEach(repuestoItem =>
-            {
-                if(repuestoItem.Codigo == codigo)
-                {
-                    if(repuestoItem.Stock > 0)
+            Repuesto rep = BuscarRepuesto(codigo);
+                    if (rep.Stock > 0)
                         throw new RepuestoConStockException();
-                    _listaRepuestos.Remove(repuestoItem);
-                }
-            });
+                    _listaRepuestos.Remove(rep);
         }
         public void ModificarPrecio(int codigo, double nuevoPrecio)
         {
-            _listaRepuestos.ForEach(repuestoItem =>
-            {
-                if (repuestoItem.Codigo == codigo)
-                {
-                    repuestoItem.Precio = nuevoPrecio;
-                }
-            });
+            Repuesto rep = BuscarRepuesto(codigo);
+            rep.Precio = nuevoPrecio;
         }
-        public void AgregarStock(int codigo, int sumaStock)
+        public void AgregarStock(int codigo, int unidades)
         {
-            _listaRepuestos.ForEach(repuestoItem =>
-            {
-                if (repuestoItem.Codigo == codigo)
-                {
-                    repuestoItem.Stock += sumaStock;
-                }
-            });
+            Repuesto rep = BuscarRepuesto(codigo);
+            rep.Stock += unidades;
         }
-        public void QuitarStock(int codigo, int restaStock)
+        public void QuitarStock(int codigo, int unidades)
         {
-            _listaRepuestos.ForEach(repuestoItem =>
-            {
-                if (repuestoItem.Codigo == codigo)
-                {
-                    if (repuestoItem.Stock - restaStock < 0)
-                        throw new StockNegativoException();
-                    repuestoItem.Stock -= restaStock;
-                }
-            });
+            Repuesto rep = BuscarRepuesto(codigo);
+            if (rep.Stock - unidades < 0)
+                throw new StockNegativoException();
+            rep.Stock -= unidades;
         }
-        public List<Repuesto> TraerPorCategoria(int codigoCategoria)
+        public string ListarPorCategoria(int codigoCategoria)
         {
-
-            List<Repuesto> listaRepuestosPorCategoria = new List<Repuesto>(); 
+            string listaRepuestosPorCategoria = ""; 
             _listaRepuestos.ForEach(repuestoItem =>
             {
                 if(repuestoItem.CategoriaDeRepuesto.Codigo == codigoCategoria)  
-                    listaRepuestosPorCategoria.Add(repuestoItem);
+                    listaRepuestosPorCategoria += repuestoItem.ToString() + "\n";
             });
             return listaRepuestosPorCategoria;
         }
